@@ -50,7 +50,7 @@ WORKDIR $APP_HOME
 COPY . .
 RUN ls -la . && pwd
 RUN mkdir -p $TGT/var/lib/$APPNAME/conf.d \
-    && mkdir -vp $TGT/var/run/$APPNAME $TGT/var/log/$APPNAME $TGT/etc $TGT/etc/sysconfig $TGT/etc/default \
+    && mkdir -p $TGT/var/run/$APPNAME $TGT/var/log/$APPNAME $TGT/etc $TGT/etc/sysconfig $TGT/etc/default \
     && touch $TGT/var/lib/$APPNAME/$APPNAME.yml $TGT/etc/sysconfig/$APPNAME $TGT/etc/default/$APPNAME \
     && cp -R ./public $TGT/var/lib/$APPNAME/ \
     && cp -R ./ci/etc/$APPNAME $TGT/etc/ \
@@ -65,7 +65,7 @@ ENV GOPROXY="$GOPROXY"
 RUN echo "Using GOPROXY=$GOPROXY" \
     && go mod download
 RUN export GOVER=$(go version) \
-    && export VERSION="$(grep -E 'Version[ \t]+=[ \t]+' ./cli/$APPNAME/cmd/doc.go|grep -Eo '[0-9.]+')" \
+    && export VERSION="$(grep -E 'Version[ \t]+=[ \t]+' ./cli/say-yes/cmd/doc.go|grep -Eo '[0-9.]+')" \
     && export LDFLAGS="-s -w \
         	-X \"$W_PKG.Buildstamp=$BUILDTIME\" -X \"$W_PKG.Githash=$GIT_REVISION\" \
         	-X \"$W_PKG.Version=$VERSION\" -X \"$W_PKG.GoVersion=$GOVER\" " \
@@ -73,7 +73,7 @@ RUN export GOVER=$(go version) \
     && git config --global --add safe.directory $(pwd) \
     && CGO_ENABLED=0 go build -v -tags docker -tags k8s,istio -tags cmdr-apps \
        -ldflags "$LDFLAGS" \
-       -o $TGT/var/lib/$APPNAME/$APPNAME ./cli/$APPNAME/
+       -o $TGT/var/lib/$APPNAME/$APPNAME ./cli/say-yes/
 RUN ls -la $TGT $TGT/var/lib/$APPNAME $TGT/etc/$APPNAME
 # RUN ldd --help
 # RUN ldd $TGT/var/lib/$APPNAME/$APPNAME   # need musl-utils & musl-dev
@@ -135,7 +135,7 @@ EXPOSE $PORT
 
 # Use an unprivileged user.
 USER $USER
-ENTRYPOINT ["/var/lib/your-starter/your-starter"]
+ENTRYPOINT ["/var/lib/say-yes/say-yes"]
 #ENTRYPOINT ["$APP_HOME/$APPNAME"]
 CMD ["--help"]
 #CMD ["server", "run"]

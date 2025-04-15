@@ -5,7 +5,7 @@ package main
 // //go:generate swag init --output ./swaggerdocs
 // 
 // import (
-// 	_ "github.com/%REPOSITORY%/cli/%NAME%/swaggerdocs"
+// 	_ "github.com/hedzr/say-yes/cli/say-yes/swaggerdocs"
 // 
 // 	_ "github.com/alecthomas/template"
 // 	_ "github.com/swaggo/swag"

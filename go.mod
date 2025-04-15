@@ -1,4 +1,4 @@
-module cmdr-starter
+module github.com/hedzr/say-yes
 
 go 1.23.0
 

@@ -2,14 +2,14 @@ package main
 
 //goland:noinspection GoNameStartsWithPackageName
 const (
-	appName   = "%NAME%"
+	appName   = "say-yes"
 	version   = "1.0.0"
 	author    = `The Examples Authors`
 	desc      = `a good blueprint for you.`
 	longDesc  = `a good blueprint for you.`
 
-To get help for %NAME% building options, run 
-'%NAME% --help', or '%NAME% -h'.
+To get help for say-yes building options, run 
+'say-yes --help', or 'say-yes -h'.
 `
 	examples = `
 $ {{.AppName}} gen shell [--bash|--zsh|--auto]

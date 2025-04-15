@@ -1,12 +1,12 @@
-# cmdr-go-starter
+# hedzr/say-yes
 
-![Go](https://github.com/hedzr/cmdr-go-starter/workflows/Go/badge.svg)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/hedzr/cmdr-go-starter)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/hedzr/cmdr-go-starter.svg?label=release)](https://github.com/hedzr/cmdr-go-starter/releases)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/hedzr/cmdr-go-starter)
-[![Go Report Card](https://goreportcard.com/badge/github.com/hedzr/cmdr-go-starter)](https://goreportcard.com/report/github.com/hedzr/cmdr-go-starter)<!--
-[![codecov](https://codecov.io/gh/hedzr/cmdr-go-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/hedzr/cmdr-go-starter)
-[![Coverage Status](https://coveralls.io/repos/github/hedzr/cmdr-go-starter/badge.svg?branch=master)](https://coveralls.io/github/hedzr/cmdr-go-starter?branch=master) -->
+![Go](https://github.com/hedzr/say-yes/workflows/Go/badge.svg)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/hedzr/say-yes)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/hedzr/say-yes.svg?label=release)](https://github.com/hedzr/say-yes/releases)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/hedzr/say-yes)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hedzr/say-yes)](https://goreportcard.com/report/github.com/hedzr/say-yes)<!--
+[![codecov](https://codecov.io/gh/hedzr/say-yes/branch/master/graph/badge.svg)](https://codecov.io/gh/hedzr/say-yes)
+[![Coverage Status](https://coveralls.io/repos/github/hedzr/say-yes/badge.svg?branch=master)](https://coveralls.io/github/hedzr/say-yes?branch=master) -->
 [![DocSite](https://img.shields.io/badge/Doc-Site-blue)](https://docs.hedzr.com/docs/cmdr.v2/)
 
 A template repository to build your first Golang Open Source app based [cmdr](https://github.com/hedzr/cmdr).
@@ -49,13 +49,13 @@ To run the CLI app:
 ```bash
 # go install -v github.com/swaggo/swag/cmd/swag
 go generate ./...               # run it once at least, for gen the swagger-doc files from skeletons
-go run ./cli/your-starter/      # build the CLI app
+go run ./cli/say-yes/      # build the CLI app
 ```
 
-For a first sight, you can check if the config files under `./ci/etc/your-starter/` are loaded properly. A sample result should be:
+For a first sight, you can check if the config files under `./ci/etc/say-yes/` are loaded properly. A sample result should be:
 
 ```bash
-$ HELP=1 go run ./cli/your-starter ~~debug
+$ HELP=1 go run ./cli/say-yes ~~debug	# `HELP=1` is equivalent with `--help`
 
 Store:
   app.                          <B>

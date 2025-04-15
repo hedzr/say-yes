@@ -4,7 +4,7 @@ import (
 	"context"
 	"os"
 
-	"cmdr-starter/cli/your-starter/cmd"
+	"hedzr/say-yes/cli/say-yes/cmd"
 
 	loaders "github.com/hedzr/cmdr-loaders"
 	"github.com/hedzr/cmdr/v2"
