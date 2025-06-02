@@ -9,7 +9,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/hedzr/say-yes/badge.svg?branch=master)](https://coveralls.io/github/hedzr/say-yes?branch=master) -->
 [![DocSite](https://img.shields.io/badge/Doc-Site-blue)](https://docs.hedzr.com/docs/cmdr.v2/)
 
-A sample project based on cmdr-go-starter, and [cmdr](https://github.com/hedzr/cmdr).
+A sample project based on [cmdr-go-starter](https://github.com/hedzr/cmdr-go-starter), and [cmdr](https://github.com/hedzr/cmdr).
 
 > powered by [cmdr](https://github.com/hedzr/cmdr) v2.1+.
 
