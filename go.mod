@@ -22,7 +22,7 @@ require (
 	github.com/hedzr/store/codecs/yaml v1.3.11 // indirect
 	github.com/hedzr/store/providers/env v1.3.11 // indirect
 	github.com/hedzr/store/providers/file v1.3.11 // indirect
-	github.com/hjson/hjson-go/v4 v4.4.0 // indirect
+	github.com/hjson/hjson-go/v4 v4.5.0 // indirect
 	github.com/npillmayer/nestext v0.1.3 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.3 // indirect
 	golang.org/x/crypto v0.45.0 // indirect
